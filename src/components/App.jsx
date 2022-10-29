@@ -33,7 +33,7 @@ export const App = () => {
 
      
 
-      console.log(cart.length);
+      // console.log(cart.length);
 
       localStorage.setItem('counter',counter);
 
@@ -51,8 +51,8 @@ export const App = () => {
       
         setCart( [...cart,{ name,img,cost,id}])
 
-        setCounter(cart.lenght);
-      console.log({counter})
+        setCounter(counter => counter+1);
+      // console.log({counter})
        
 
     // localStorage.setItem('cart',JSON.stringify([...cart]));
