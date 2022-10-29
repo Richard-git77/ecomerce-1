@@ -1,0 +1,45 @@
+.grid{
+
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 270px);
+    gap: 40px;
+    padding: 20px;
+    justify-content: center;
+
+    margin-top:  20px;
+
+    
+}
+
+.total{
+    height:100px;
+    width:227px;
+    background-color: goldenrod;
+    
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    
+    border-radius: 27px;
+    border: 4px solid white;
+    box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
+}
+
+
+
+
+
+
+h4{
+    color:white;
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+.cost{
+    color: white;
+    text-align: center;
+
+    font-size: 2rem;
+}

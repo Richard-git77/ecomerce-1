@@ -1,0 +1,15 @@
+.card{
+            height: px;
+}
+
+img{
+    height: 200px;
+}
+
+
+.card:hover{
+
+    
+
+    transform: scale(1.11);
+}
