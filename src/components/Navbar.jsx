@@ -8,8 +8,16 @@ import {useCounterContext} from '../context/Provider'
 
 export const Navbar = () => {
 //   const counter=7;
-
+ 
   const [counter,setCounter] = useCounterContext();
+
+
+   const onChange = (e) => {
+        
+        const search=e.target.value;
+        console.log(search);
+
+   }
   
   return (
 <>
@@ -31,7 +39,7 @@ export const Navbar = () => {
                         <SearchIcon  color="gray" style={{ fontSize: 50 , color :'white'}}/>
                     </div>
                 <input className={styles.box} type="text"
-                placeholder='What are you looking for?' />
+                placeholder='What are you looking for?' onChange={onChange} />
                 </div>
                 </li>
 

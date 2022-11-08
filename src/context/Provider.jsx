@@ -29,14 +29,38 @@ export function Provider ({children}){
 
 
     const [product, setProduct] = useState([]);
-    const [cart, setCart] = useState([
+    const [cart, setCart] = useState(() =>{
+        const dato = localStorage.getItem('cart');
+       if(dato){
+         return JSON.parse(dato);
+         
+       }else{
+         return [];
+       }
 
-    ]);
 
+      
+     });
 
     
-    const [data, setData] = useState([])
-    const [counter, setCounter] = useState(0);
+     const [data, setData] = useState([])
+     const [counter, setCounter] = useState(() =>{
+        const dato = localStorage.getItem('counter');
+       if(dato){
+         return JSON.parse(dato);
+         
+       }else{
+         return [];
+       }
+
+
+      
+     });
+
+    
+    
+    
+    
     return(
         <productContext.Provider value={[product,setProduct]}>
                 <cartContext.Provider value={[cart, setCart]}>

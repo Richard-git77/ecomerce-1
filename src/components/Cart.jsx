@@ -17,7 +17,7 @@ export const Cart = () => {
    let total=0;
 
 
-
+          
    
 
     let retrieveCart=JSON.parse(localStorage.getItem('cart'));

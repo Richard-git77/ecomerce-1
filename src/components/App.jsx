@@ -1,9 +1,9 @@
 import  Header  from "./Header"
 import Product from './Product'
-import manzana from '/public/Manzanas1.png'
-import sandia from '/public/sandia.jpg'
+import manzana from '/Manzanas1.png'
+import sandia from '/sandia.jpg'
 import { useDataContext,useCounterContext ,useCartContext} from '../context/Provider';
-import mango from '/public/mango.jpg'
+import mango from '/mango.jpg'
 import styles from '../styles/App.module.css'
 import {useState,useEffect,useRef} from 'react'
 
@@ -13,23 +13,25 @@ export const App = () => {
 
 
   const [counter,setCounter] = useCounterContext();
-  const [cart, setCart] =  useCartContext();
+  
   let cartPageIf= true;
 
 
-    //  const gap = 0;
-    //  setCart(gap);
-      
+    const [cart, setCart] =  useCartContext();
 
-
-         
-         
     
     useEffect(() => {
      
      
-      localStorage.setItem('cart',JSON.stringify([...cart]));
-      console.log({cart} )
+      console.log({cart})
+
+     
+    
+
+           
+       localStorage.setItem('cart',JSON.stringify(cart));
+
+      // console.log({cart} )
 
      
 
@@ -47,7 +49,7 @@ export const App = () => {
       
       
 
-      
+    
       
         setCart( [...cart,{ name,img,cost,id}])
 
@@ -56,7 +58,7 @@ export const App = () => {
        
 
     // localStorage.setItem('cart',JSON.stringify([...cart]));
-      console.log({cart})
+     
 
 
     }
